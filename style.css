@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(17, 17, 17);
+  font-family: "Prompt", sans-serif;
+  box-sizing: border-box;
+}
+/* nav section */
+#nav {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  padding-top: 1%;
+  position: fixed;
+  z-index: 999;
+}
+
+#nav .nav-item ul {
+  list-style-type: none;
+  display: flex;
+  margin-left: 50%;
+
+  color: #fff;
+}
+#nav .nav-item ul li {
+  padding: 20px 15px;
+  margin: 0 12px;
+}
+#nav .nav-item ul li a {
+  position: absolute;
+  background-color: #f04e3c;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  right: 4%;
+  top: 8%;
+  cursor: pointer;
+}
+/*------------ start image section------------*/
+.image {
+  max-width: 1050px;
+  position: relative;
+  background-color: rgb(17, 17, 17);
+  background-image: url(./hero1.png);
+  height: 900px;
+  width: 100%;
+  left: 298px;
+}
+@media screen and (max-width: 770px) {
+  .image {
+    background-image: none;
+  }
+  .image .text {
+    position: absolute;
+    color: white;
+    top: 35%;
+    left: -100%;
+  }
+  .image .text h2 {
+    font-size: 4.5vw;
+    font-weight: 1000;
+  }
+  .image .text p {
+    font-size: 2vw;
+    color: #f04e3c;
+  }
+  .image .text button {
+    background: #f04e3c;
+    padding: 5% 5%;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3vw;
+    border-radius: 0px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 0;
+    margin-bottom: 0;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.image .text {
+  position: absolute;
+  color: white;
+  top: 35%;
+  left: -16%;
+}
+.image .text h2 {
+  font-size: 4.5vw;
+  font-weight: 1000;
+}
+.image .text p {
+  font-size: 2vw;
+  color: #f04e3c;
+}
+.image .text button {
+  background: #f04e3c;
+  padding: 5% 5%;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3vw;
+  border-radius: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+}
+/*------------ start image section------------*/
+/*------------ start Small details section------------*/
+.sm-details {
+  background-color: #121212;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sm-details .left-content {
+  padding: 80px;
+}
+.sm-details .left-content h1 {
+  font-size: 3vw;
+  font-weight: 900;
+  color: #fff;
+}
+.sm-details .left-content p {
+  font-size: 1.2vw;
+  display: inline-block;
+  height: 30px;
+  border-bottom: 2px solid #f04e3c;
+  color: #f04e3c;
+}
+
+.sm-details .right-content {
+  padding: 80px;
+  margin-left: 5.5vw;
+  color: #fff;
+}
+.sm-details .right-content p {
+  line-height: 25px;
+  word-spacing: 5px;
+}
+.sm-details .right-content span {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  line-height: 30px;
+}
+.sm-details .right-content .experience {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sm-details .right-content .experience .year {
+  font-size: 4.5vw;
+}
+.sm-details .right-content .experience .year-text {
+  margin-top: 20px;
+  margin-left: 10%;
+  font-size: 1.3vw;
+}
+/*------------ end Small details section------------*/
+/*------------ start Blog post section ------------*/
+.blog-post-images {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 150px;
+  margin-left: 75px;
+}
+.blog-post-images .card {
+  max-width: 370px;
+  margin: 15px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-post-images img {
+  width: 100%;
+}
+.blog-post-images .text {
+  color: #fff;
+}
+.blog-post-images .text h2 {
+  font-weight: 700;
+  line-height: 90px;
+}
+.blog-post-images .text p {
+  color: #d3d3d4;
+}
+/*------------end Blog post section------------*/
+/*------------start gallery section------------*/
+/* .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .card {
+  max-width: 449px;
+  max-height: 450px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+} */
+
+.container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 400px;
+}
+
+.container > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  display: none;
+  position: absolute;
+}
+
+.container > div:hover .description {
+  display: block;
+  text-align: center;
+  background-color: rgba(76, 175, 80, 0.6);
+}
+
+.container > div:hover img {
+  background: rgba(76, 175, 80, 0.6);
+}
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #20263f;
+}
+/*------------end Blog post section------------*/
+/*------------start achivment section------------*/
+.achivment {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 10% 5%;
+}
+.achivment .brand {
+  display: inline-block;
+  text-align: center;
+  padding: 57px;
+  margin: 0.5%;
+  border: 1px solid #2e2e2e;
+  color: #fff;
+  position: relative;
+}
+.achivment .brand h3 {
+  margin-top: 20%;
+}
+.achivment .text {
+  width: 48.6%;
+  padding: 5%;
+
+  color: #fff;
+}
+.achivment .text h1 {
+  font-size: 3em;
+}
+.achivment .text button {
+  background: #f04e3c;
+  padding: 5% 5%;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3vw;
+  border-radius: 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*------------end achivment section------------*/
+/*------------start intro section------------*/
+
+.intro {
+  text-align: center;
+  color: #fff;
+  background-color: #121212;
+  padding: 10%;
+}
+.intro .test {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 35%;
+  padding: 40px;
+}
+
+.intro .test .info {
+  padding-left: 100px;
+
+  position: absolute;
+}
+.intro .intro-part-1 {
+  margin: 0 5.5%;
+  font-size: 3.2vh;
+  line-height: 1.5em;
+}
+
+/*------------end intro section------------*/
+/*------------start BLOG section------------*/
+.blog {
+  background-color: #0e0e0e;
+
+  width: 100%;
+}
+.blog .title-blog {
+  text-align: center;
+  padding-top: 150px;
+}
+.blog .title-blog h2 {
+  font-size: 42px;
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+  line-height: 1.3;
+}
+.blog .title-blog p {
+  color: #fff;
+
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.blog .blog-photos {
+  padding-bottom: 10%;
+}
+.blog .blog-photos .blog-images {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  margin-left: 90px;
+}
+.blog .blog-photos .blog-images .newCard {
+  max-width: 370px;
+  margin-right: 40px;
+  position: relative;
+}
+.blog .blog-photos .blog-images img {
+  width: 100%;
+  margin-bottom: 10%;
+}
+.blog .blog-photos .blog-images .text {
+  background: #121212;
+  position: absolute;
+  margin-bottom: 10%;
+  bottom: -20px;
+  left: 25px;
+  padding: 10%;
+  width: 19.8rem;
+}
+.blog .blog-photos .blog-images .text h2 {
+  color: #fff;
+  line-height: 1.4em;
+  font-size: 1.4vw;
+  font-weight: 700;
+}
+.blog .blog-photos .blog-images .text span {
+  color: #828fa3;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+/*------------end BLOG section------------*/
+/* ------------start footer section------------*/
+
+.footer {
+  color: #fff;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-columns: 1000px;
+
+  margin: 10% 5%;
+}
+
+.footer .logo-text {
+  line-height: 2em;
+}
+
+.footer .navigation ul {
+  list-style-type: none;
+}
+.footer .navigation ul li {
+  padding-top: 25px;
+}
+.footer .links ul {
+  list-style-type: none;
+}
+.footer .links ul li {
+  padding-top: 25px;
+}
+
+.footer .feed-images .instagram {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 110px;
+}
+
+.footer .feed-images .instagram > div > img {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+}
+.footer2 p {
+  color: #393a50;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 12px;
+  margin-left: 5%;
+}
+.footer2 color {
+  color: #f04e3c;
+}
+/*------------end footer section------------ */
